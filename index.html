@@ -313,7 +313,10 @@ span.cm-strikethrough { text-decoration: line-through; }
     --side-bar-bg-color: #f5f7f9;
     --control-text-color: #3b454e;
     --primary-color: #3884ff;
-    --backgroundx: linear-gradient(45deg, rgba(128, 208, 199, 1) 0%, rgba(8, 174, 234, 1) 50%, rgba(0, 147, 233, 1) 100%);
+    --backgroundx: linear-gradient(315deg, rgba(0, 147, 233, 1) 0%, rgba(8, 174, 234, 1) 30%, rgba(128, 208, 199, 1) 60%, rgba(42, 245, 152, 1) 100%);
+    --backgrounda: linear-gradient(15deg, rgba(66, 134, 244, 1) 0%, rgba(5, 117, 230, 1) 30%, rgba(0, 147, 233, 1) 70%, rgba(8, 174, 234, 1) 100%);
+    background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+
     /*--backgroundx: linear-gradient(45deg, rgba(142, 245, 152, 1) 0%, rgba(8, 174, 234) 50%, rgba(0, 147, 233, 1) 100%);*/
     --primary-btn-border-color: #3884ff;
     --active-file-bg-color: #e6ecf1;
@@ -408,11 +411,11 @@ body {
 
 a {
     /*color: var(--primary-color);*/
-    /*text-decoration: none !important;*/
-    /*transition-duration: 0.2s;*/
-    /*transition-property: color;*/
-    /*background-image: linear-gradient(45deg, rgba(128, 208, 199, 1) 0%, rgb(8, 174, 234) 50%, rgba(0, 147, 233, 1) 100%);*/
-    background-image: var(--backgroundx);
+    text-decoration: none !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+    /*--backgroundx: linear-gradient(315deg, rgba(0, 147, 233, 1) 0%, rgba(8, 174, 234, 1) 30%, rgba(139, 198, 236, 1) 60%, rgba(149, 153, 226, 1) 100%);*/
+    background-image: var(--backgrounda);
     color: var(--primary-color);
     background-clip: text;
     -webkit-background-clip: text;
@@ -2878,38 +2881,6 @@ html::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     display: none;
 }
-
-wrapper {
-    height: 100%;
-    /*This part is important for centering*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.typing-demo {
-    width: 100%;
-    /*animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;*/
-    animation: typing 2s steps(22) infinite, blink 0.5s step-end infinite alternate;
-    /*white-space: nowrap;*/
-    overflow: hidden;
-    border-right: 2px solid;
-    /*font-family: monospace;*/
-    /*font-size: 2em;*/
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
 
  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
 </style>
